@@ -45,4 +45,9 @@ public class Rectangle {
     return 2 * (width + height);
   }
   
+  //method: scale height and width of rectangles 
+  public void scale(double scaleW, double scaleH){
+      height = height*scaleH;
+      width = width*scaleW;
+  }
 }

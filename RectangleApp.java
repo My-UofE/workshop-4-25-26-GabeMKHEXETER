@@ -29,14 +29,22 @@ public class RectangleApp {
 		System.out.println("Width: "+myRect2.width+", Height: "+myRect2.height);
 		System.out.println("Origin: "+myRect2.originX+","+myRect2.originY);
 		 
-
-
-		
 		System.out.println("Creating myRect3");
 		Rectangle myRect3 = new Rectangle(); 
 		System.out.println("Width: "+myRect3.width+", Height: "+myRect3.height);
 		System.out.println("Origin: "+myRect3.originX+","+myRect3.originY);
 		
 
+		myRect1.scale(0.5, 0.5); // applies 0.5 scale to both x and y, changing width to 8, height to 4 (unsure how to do BOTH in one :<)
+ 		myRect2.scale(1,3); // should change height to 24 with width unchanged
+ 		myRect3.scale(15,10); // should scale to width 15, height 10
+		System.out.println("New Rect1 Width: "+myRect1.width);
+		System.out.println("New Rect1 Height: "+myRect1.height);
+
+		System.out.println("New Rect2 Width: "+myRect2.width);
+		System.out.println("New Rect2 Height: "+myRect2.height);
+
+		System.out.println("New Rect3 Width: "+myRect3.width);
+		System.out.println("New Rect3 Height: "+myRect3.height);
 	}
 }
