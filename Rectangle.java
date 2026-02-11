@@ -21,7 +21,7 @@ public class Rectangle {
   public Rectangle(double width, double height) {
     this(width, height, 0, 0);}
 
-  // second constructor: 
+  // third constructor: 
   public Rectangle() {
     width = 1;
     height = 1;
@@ -50,4 +50,24 @@ public class Rectangle {
       height = height*scaleH;
       width = width*scaleW;
   }
+  //method: check if 2 rectangles are overlapping
+  /*public static boolean isOverlappedWith(Rectangle r){
+    //width + x and height + y (if they produce a positive number?)
+    //this command?
+    if(((r.originX + r.width) - (this.originX - this.width) > 0)&&((r.originY + r.height) - (this.originY + this.height))){
+      return True;  
+    }
+    else{
+      return False;
+    }
+  } */
+
+ //method: checks if a rectangle is really a square
+  public boolean isSquare(){
+    return (width == height);
+  }
+ //method: calculates the width to height ratio
+   public double calcRatio(){
+    return (width/height);
+ }
 }
