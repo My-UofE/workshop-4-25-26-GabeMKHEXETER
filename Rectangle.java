@@ -2,7 +2,7 @@
 public class Rectangle {
   
   // 4 instance attributes
-  public double width;
+  public double width; //changed :o
   public double height;
   public double originX = 0.0;
   public double originY = 0.0;
@@ -27,6 +27,16 @@ public class Rectangle {
     height = 1;
     originX = 0;
     originY = 0;
+  }
+  //GETTER METHOD
+  public double getWidth(){
+    return width;
+  }
+
+  //SETTER METHOD
+  public void setWidth(double width){
+    if (width > -1){
+    this.width = width;}
   }
 
   // method: move the rectangle

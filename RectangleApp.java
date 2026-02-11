@@ -10,7 +10,7 @@ public class RectangleApp {
 		//static field
 		System.out.println("Rectangle has " + Rectangle.NUMBER_OF_SIDES + " sides");
 		//instance fields
-		System.out.println("Width: "+myRect1.width+", Height: "+myRect1.height);
+		System.out.println("Width: "+myRect1.getWidth()+", Height: "+myRect1.height); //causing problems bc of privacy
 		System.out.println("Origin is: "+myRect1.originX+","+myRect1.originY);
 		//calling methods
 		System.out.println("Area: "+myRect1.getArea());
@@ -45,6 +45,18 @@ public class RectangleApp {
 		System.out.println("New Rect2 Height: "+myRect2.height);
 
 		System.out.println("New Rect3 Width: "+myRect3.width);
-		System.out.println("New Rect3 Height: "+myRect3.height);
+		System.out.println("New Rect3 Height: "+myRect3.height); 
+
+		//task 3: not..printing? whyyyyyyyyyy ughhh
+		Rectangle myRect7 = new Rectangle(30.0, 5.0, 10, 10); 
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+
+		// change to positive width should be allowed
+		myRect7.setWidth(40);
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+
+		// change to negative width should be ignored
+		myRect7.setWidth(-10);
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
 	}
 }
