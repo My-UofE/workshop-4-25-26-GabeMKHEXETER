@@ -2,15 +2,14 @@
 public class RectangleApp {
 	//To be excutable, need a main method
 	public static void main( String[] args ) {
-		System.out.println("Creating myRect1");
-		
+		System.out.println("Creating Rect1");
 		Rectangle myRect1; //myRect is not instantiated
 		myRect1 = new Rectangle(20.0, 8.0,30,30); //instantiated
 		
 		//static field
 		System.out.println("Rectangle has " + Rectangle.NUMBER_OF_SIDES + " sides");
 		//instance fields
-		System.out.println("Width: "+myRect1.getWidth()+", Height: "+myRect1.height); //causing problems bc of privacy
+		System.out.println("Width: "+myRect1.width+", Height: "+myRect1.height); //causing problems bc of privacy
 		System.out.println("Origin is: "+myRect1.originX+","+myRect1.originY);
 		//calling methods
 		System.out.println("Area: "+myRect1.getArea());
@@ -46,8 +45,21 @@ public class RectangleApp {
 
 		System.out.println("New Rect3 Width: "+myRect3.width);
 		System.out.println("New Rect3 Height: "+myRect3.height); 
+		//nothing past here is printing WHYYYYYY!!!!! >:c
+		//task 4:
+		Rectangle r1 = new Rectangle(10.0,5.0);
+		Rectangle r2 = new Rectangle(10.0,5.0);
+		Rectangle r3 = r2;
+		System.out.println("Object reference tests:");
+		System.out.println("r1: " + r1); //indexed ?
+		System.out.println("r2: " + r2);
+		System.out.println("r3: " + r3);
+		r2.scale(0.5,0.5);
+		System.out.println("r2 width: " + r2.getWidth());
+		System.out.println("r3 width: " + r3.getWidth());
 
-		//task 3: not..printing? whyyyyyyyyyy ughhh
+
+		/*//task 3: not..printing? whyyyyyyyyyy ughhh
 		Rectangle myRect7 = new Rectangle(30.0, 5.0, 10, 10); 
 		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
 
@@ -57,6 +69,6 @@ public class RectangleApp {
 
 		// change to negative width should be ignored
 		myRect7.setWidth(-10);
-		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() ); */
 	}
 }
