@@ -51,7 +51,7 @@ public class RectangleApp {
 		Rectangle r2 = new Rectangle(10.0,5.0);
 		Rectangle r3 = r2;
 		System.out.println("Object reference tests:");
-		System.out.println("r1: " + r1); //indexed ?
+		System.out.println("r1: " + r1); //indexed ? - normal now!
 		System.out.println("r2: " + r2);
 		System.out.println("r3: " + r3);
 		r2.scale(0.5,0.5);
